@@ -133,7 +133,7 @@ char online_server_start(online_server *ptr)
 #endif
 	{
 		sfSocketSelector_addTcpListener(ptr->socksel, ptr->tcpl);
-		rgspf(loglev_normal, "aoeu's rhythm game server (on port %d)", ONLINE_SERVER_PORT);
+		rgspf(loglev_normal, "aoesu's rhythm game server (on port %d)", ONLINE_SERVER_PORT);
 		ptr->running = 1;
 		ptr->th = SDL_CreateThread(online_server_tick, "rgserv", ptr);
 		timer_restart(ptr->uptime);

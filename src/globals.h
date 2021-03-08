@@ -4,7 +4,7 @@ typedef enum game_mode
 {
     game_mode_ouendan,
     game_mode_mania,
-	game_mode_aoeu,
+	game_mode_aoesu,
     game_mode_count
 } game_mode;
 

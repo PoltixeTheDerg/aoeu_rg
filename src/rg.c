@@ -211,7 +211,7 @@ void render_back_button()
 
 void render_change_mode_button(float x, float y)
 {
-	button *btn = ez_bp("switch_mode_btn", rg.mode == game_mode_ouendan ? "ouendan" : rg.mode == game_mode_mania ? "mania" : rg.mode == game_mode_aoeu ? "aoeu" : "???", x, y);
+	button *btn = ez_bp("switch_mode_btn", rg.mode == game_mode_ouendan ? "ouendan" : rg.mode == game_mode_mania ? "mania" : rg.mode == game_mode_aoesu ? "aoesu" : "???", x, y);
 	if(btn->hovered)
 	{
 		rg.gui_render_ptr = btn;
@@ -1080,9 +1080,9 @@ int main(int argc, char *argv[])
 	SDL_DisplayMode dm;
 	SDL_GetCurrentDisplayMode(0, &dm);
 #ifdef RELEASE
-	char *title = "aoeu's rhythm game";
+	char *title = "aoesu's rhythm game";
 #else
-	char *title = "aoeu's rhythm game DEBUG BUILD " COMPILE_MSG;
+	char *title = "aoesu's rhythm game DEBUG BUILD " COMPILE_MSG;
 #endif
 	if(rg.do_fullscreen_switch)
 	{
@@ -1457,7 +1457,7 @@ int main(int argc, char *argv[])
 				free(stats_str);
 			}
 
-			text3_fmt(rg.win_width, rg.win_height, rg.win_width, 255, origin_right, origin_bottom, text3_justification_right, "%s", "~uprivate debug build\nplease do not redistribute!\naoeu's rhythm game is copyright (c) aoeu 2020-2021");
+			text3_fmt(rg.win_width, rg.win_height, rg.win_width, 255, origin_right, origin_bottom, text3_justification_right, "%s", "~uprivate debug build\nplease do not redistribute!\naoesu's rhythm game is copyright (c) aoesu 2020-2021");
 		}
 		else if(rg.screen == screen_song_select)
 		{

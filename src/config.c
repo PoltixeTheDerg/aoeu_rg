@@ -115,7 +115,7 @@ void config_write()
 {	
 	FILE *fp = fopen(CONFIG_FILENAME, "wb");
 	
-	fputs("# aoeu's rhythm game config file\n\n", fp);
+	fputs("# aoesu's rhythm game config file\n\n", fp);
 	
 	list_node *gn;
 	for(gn = config_groups_list->start; gn != NULL; gn = gn->next)
